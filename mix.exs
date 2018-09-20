@@ -1,9 +1,9 @@
-defmodule EmqElixirPlugin.Mixfile do
+defmodule EmqxRestAuth.Mixfile do
   use Mix.Project
 
   def project do
     [
-      app: :emq_elixir_plugin,
+      app: :emqx_rest_auth,
       version: "2.3.2",
       elixir: "~> 1.5-dev",
       start_permanent: Mix.env == :prod,
