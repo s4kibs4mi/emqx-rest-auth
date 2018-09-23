@@ -1,13 +1,13 @@
 defmodule EmqxRestAuth.Acl do
 
   def load(env) do
-    :emqttd_access_control.register_mod(:auth, &EmqxRestAuth.Acl, [])
-    :emqttd_access_control.register_mod(:acl, &EmqxRestAuth.Acl, [])
+    :emqttd_access_control.register_mod(:auth, EmqxRestAuth.Acl, [])
+    :emqttd_access_control.register_mod(:acl, EmqxRestAuth.Acl, [])
   end
 
   def unload do
-    :emqttd_access_control.unregister_mod(:auth, &EmqxRestAuth.Acl)
-    :emqttd_access_control.unregister_mod(:acl, &EmqxRestAuth.Acl)
+    :emqttd_access_control.unregister_mod(:auth, EmqxRestAuth.Acl)
+    :emqttd_access_control.unregister_mod(:acl, EmqxRestAuth.Acl)
   end
 
   def init(_opts) do
