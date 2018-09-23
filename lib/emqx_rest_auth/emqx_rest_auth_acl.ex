@@ -17,12 +17,16 @@ defmodule EmqxRestAuth.Acl do
 
   def check(client, password, _opts) do
     IO.puts("OnAuth check")
-    {:ok}
+    #    {:ignore}
+    #    {:error, "Error happend"}
+    {:ok, false}
   end
 
   def check_acl(client, _opts) do
     IO.puts("OnAcl check_acl")
-    {:ok, :allow}
+    #    {:ignore}
+    #    {:deny}
+    {:allow}
   end
 
   def reload_acl(_opts) do
