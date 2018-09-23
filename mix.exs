@@ -15,13 +15,14 @@ defmodule EmqxRestAuth.Mixfile do
   def application do
     [
       extra_applications: [:logger],
-      mod: {EmqElixirPlugin, []}
+      mod: {EmqxRestAuth, []}
     ]
   end
 
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
+      {:emqttd, git: "https://github.com/emqx/emqx.git"}
     ]
   end
 end
